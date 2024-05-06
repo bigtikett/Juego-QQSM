@@ -1,0 +1,116 @@
+body {
+    background: linear-gradient(to bottom right, #5D3B0E, #000000, #1A5276) no-repeat center fixed;
+}
+
+h1 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    padding: 40px 40px 40px 40px;
+    box-shadow: 0px 0px 10px 0px black;
+    filter: drop-shadow(0px 0px 10px white);
+    color: gold;
+    
+}
+.selected-avatar {
+    width: 100px;
+    height: auto;
+    border: 1px solid snow;
+    border-radius: 50%;
+    margin-top: 50px;
+   
+}
+#btn-menu {
+    width: 300px;
+    height: 450px;
+    margin-top: 50px;
+    & .btn {
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0, 0.5);
+        margin: 10px 0;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.5s;
+        border: 1px solid white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        &:hover {
+            background: rgba(255, 255, 255, 0.151);
+            color: gold ;
+        }
+    }
+}
+
+#language-toggle .btn {
+    margin: 10px 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 135px;
+
+    &:hover {
+        background: rgba(121, 111, 111, 0.849);
+        color: gold;
+    }
+}
+h5 {
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-align: start;
+    margin: 5px 0px 0px 20px;
+    
+}
+
+.modal-body img {
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+        border-radius: 20%;
+        transition: all 0.5s ease-in-out;
+    }
+    &:hover + p {
+        text-shadow: 0px 0px 4px gold;
+        filter: drop-shadow(0px 0px 4px gold);
+    }
+}
+.a-none:hover::after,
+.a-cristal:hover::after,
+.a-elCocas:hover::after {
+    content: attr(alt);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    text-shadow: 0px 0px 5px #1A5276; /* Efecto de sombra para clase "a-none" */
+}
+
+.a-cristal:hover::after {
+    text-shadow: 0px 0px 5px #5D3B0E; /* Efecto de sombra para clase "a-cristal" */
+}
+
+.a-elCocas:hover::after {
+    text-shadow: 0px 0px 5px #1A5276; /* Efecto de sombra para clase "a-elCocas" */
+}
